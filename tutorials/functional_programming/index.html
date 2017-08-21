@@ -46,16 +46,14 @@ if (window.hljs && document.readyState && document.readyState === "complete") {
 
 <div id="section-setup" class="section level2">
 <h2>Setup</h2>
-<p>Load/install required packages the long way. We will revisit this example in the exercises at the end to redo it with our new functional programming skills.</p>
+<p>Load/install required packages the long way. We will revisit this example in the exercises at the end to redo it with our new functional programming skills. If you cannot get this document to work, you can view it interactively at this <a href="http://bit.ly/2wTJLuf">link</a>.</p>
 <pre class="r"><code>if(!require(&quot;learnr&quot;)){install.packages(&quot;learnr&quot;); library(&quot;learnr&quot;)}
 
 if(!require(&quot;tidyverse&quot;)){install.packages(&quot;tidyverse&quot;); library(&quot;tidyverse&quot;)}
 
 if(!require(&quot;purrr&quot;)){install.packages(&quot;purrr&quot;); library(&quot;purrr&quot;)}
 
-if(!require(&quot;here&quot;)){install.packages(&quot;here&quot;); library(&quot;here&quot;)}
-
-#setwd(here::here(&#39;functional_programming&#39;))</code></pre>
+if(!require(&quot;here&quot;)){install.packages(&quot;here&quot;); library(&quot;here&quot;)}</code></pre>
 </div>
 <div id="section-introduction-to-functions" class="section level2">
 <h2>Introduction to Functions</h2>
@@ -72,7 +70,7 @@ if(!require(&quot;here&quot;)){install.packages(&quot;here&quot;); library(&quot
 </ul>
 <p><em>First, reproduce the function above, and run it.</em> <em>Next, try modifying the function’s input and body to allow it to print your name instead of ‘world’.</em></p>
 <div class="tutorial-exercise" data-label="functions-ex-1" data-caption="Code" data-completion="1" data-diagnostics="1" data-startover="1" data-lines="10">
-<script type="application/json" data-opts-chunk="1">{"fig.width":6.5,"fig.height":4,"fig.retina":2,"fig.align":"default","fig.keep":"high","fig.show":"asis","out.width":624,"warning":false,"error":false,"message":false,"exercise.df_print":"paged","exercise.checker":"NULL"}</script>
+<script type="application/json" data-opts-chunk="1">{"fig.width":6.5,"fig.height":4,"fig.retina":2,"fig.align":"default","fig.keep":"high","fig.show":"asis","out.width":624,"warning":true,"error":false,"message":true,"exercise.df_print":"paged","exercise.checker":"NULL"}</script>
 </div>
 <div class="tutorial-exercise-support" data-label="functions-ex-1-solution" data-caption="Code" data-completion="1" data-diagnostics="1" data-startover="1" data-lines="0">
 <pre class="text"><code>hello_world &lt;- function(name){
@@ -119,7 +117,7 @@ values &lt;- runif(20, min = 0, max = 20)
 score &lt;- values[1]
 
 z_score(score, values)</code></pre>
-<script type="application/json" data-opts-chunk="1">{"fig.width":6.5,"fig.height":4,"fig.retina":2,"fig.align":"default","fig.keep":"high","fig.show":"asis","out.width":624,"warning":false,"error":false,"message":false,"exercise.df_print":"paged","exercise.checker":"NULL"}</script>
+<script type="application/json" data-opts-chunk="1">{"fig.width":6.5,"fig.height":4,"fig.retina":2,"fig.align":"default","fig.keep":"high","fig.show":"asis","out.width":624,"warning":true,"error":false,"message":true,"exercise.df_print":"paged","exercise.checker":"NULL"}</script>
 </div>
 <ul>
 <li><p>Again, this is nice, but as it stands now you would have to run <code>z_score()</code> on each <em>individual</em> score to get the z score value</p></li>
@@ -163,7 +161,7 @@ z_score(score, values)</code></pre>
 <p><em>Try to use what you know to loop through numbers 1 - 10 and square each value</em></p>
 <p>Write the R code required to print each number’s squared value:</p>
 <div class="tutorial-exercise" data-label="for-loops-1-ex" data-caption="Code" data-completion="1" data-diagnostics="1" data-startover="1" data-lines="10">
-<script type="application/json" data-opts-chunk="1">{"fig.width":6.5,"fig.height":4,"fig.retina":2,"fig.align":"default","fig.keep":"high","fig.show":"asis","out.width":624,"warning":false,"error":false,"message":false,"exercise.df_print":"paged","exercise.checker":"NULL"}</script>
+<script type="application/json" data-opts-chunk="1">{"fig.width":6.5,"fig.height":4,"fig.retina":2,"fig.align":"default","fig.keep":"high","fig.show":"asis","out.width":624,"warning":true,"error":false,"message":true,"exercise.df_print":"paged","exercise.checker":"NULL"}</script>
 </div>
 <div class="tutorial-exercise-support" data-label="for-loops-1-ex-solution" data-caption="Code" data-completion="1" data-diagnostics="1" data-startover="1" data-lines="0">
 <pre class="text"><code>for(i in 1:10){
@@ -208,7 +206,7 @@ for (i in 1:length(list)){
 }
 
 print(list_sans_text)</code></pre>
-<script type="application/json" data-opts-chunk="1">{"fig.width":6.5,"fig.height":4,"fig.retina":2,"fig.align":"default","fig.keep":"high","fig.show":"asis","out.width":624,"warning":false,"error":false,"message":false,"exercise.df_print":"paged","exercise.checker":"NULL"}</script>
+<script type="application/json" data-opts-chunk="1">{"fig.width":6.5,"fig.height":4,"fig.retina":2,"fig.align":"default","fig.keep":"high","fig.show":"asis","out.width":624,"warning":true,"error":false,"message":true,"exercise.df_print":"paged","exercise.checker":"NULL"}</script>
 </div>
 <div class="tutorial-exercise-support" data-label="for-loops-2-ex-solution" data-caption="Code" data-completion="1" data-diagnostics="1" data-startover="1" data-lines="0">
 <pre class="text"><code>list &lt;- c(&#39;subject_1&#39;,&#39;subject_2&#39;,&#39;subject_3&#39;,&#39;subject_4&#39;)
@@ -240,7 +238,7 @@ while( x &lt;= 10){
   print(y^2)
   x &lt;- x+1
 }</code></pre>
-<script type="application/json" data-opts-chunk="1">{"fig.width":6.5,"fig.height":4,"fig.retina":2,"fig.align":"default","fig.keep":"high","fig.show":"asis","out.width":624,"warning":false,"error":false,"message":false,"exercise.df_print":"paged","exercise.checker":"NULL"}</script>
+<script type="application/json" data-opts-chunk="1">{"fig.width":6.5,"fig.height":4,"fig.retina":2,"fig.align":"default","fig.keep":"high","fig.show":"asis","out.width":624,"warning":true,"error":false,"message":true,"exercise.df_print":"paged","exercise.checker":"NULL"}</script>
 </div>
 <ul>
 <li>Can you change the code above so that it uses the previous value as the power?</li>
@@ -333,9 +331,10 @@ ifelse(x == 1, &#39;This is TRUE!&#39;, &#39;This is FALSE!&#39;)</code></pre>
 x = runif(10)
 
 # This doesn&#39;t replace each value
-y &lt;- if (x &lt; .5) {TRUE} else {FALSE}
-
-# Instead, it evaluates the first element of the vector &#39;x&#39;
+y &lt;- if (x &lt; .5) {TRUE} else {FALSE}</code></pre>
+<pre><code>## Warning in if (x &lt; 0.5) {: the condition has length &gt; 1 and only the first
+## element will be used</code></pre>
+<pre class="r"><code># Instead, it evaluates the first element of the vector &#39;x&#39;
 x[1]; y</code></pre>
 <pre><code>## [1] 0.7681209</code></pre>
 <pre><code>## [1] FALSE</code></pre>
@@ -348,7 +347,7 @@ y2</code></pre>
 <p><em>How might we use conditional logic with tidyverse’s <code>mutate()</code> function to change <code>starwars$gender</code> to capital letters?</em></p>
 <div class="tutorial-exercise" data-label="for-conditional-1-ex" data-caption="Code" data-completion="1" data-diagnostics="1" data-startover="1" data-lines="10">
 <pre class="text"><code>data(starwars)</code></pre>
-<script type="application/json" data-opts-chunk="1">{"fig.width":6.5,"fig.height":4,"fig.retina":2,"fig.align":"default","fig.keep":"high","fig.show":"asis","out.width":624,"warning":false,"error":false,"message":false,"exercise.df_print":"paged","exercise.checker":"NULL"}</script>
+<script type="application/json" data-opts-chunk="1">{"fig.width":6.5,"fig.height":4,"fig.retina":2,"fig.align":"default","fig.keep":"high","fig.show":"asis","out.width":624,"warning":true,"error":false,"message":true,"exercise.df_print":"paged","exercise.checker":"NULL"}</script>
 </div>
 <div class="tutorial-exercise-support" data-label="for-conditional-1-ex-solution" data-caption="Code" data-completion="1" data-diagnostics="1" data-startover="1" data-lines="0">
 <pre class="text"><code>data(starwars)
@@ -429,7 +428,7 @@ df %&gt;% sapply(., mean)</code></pre>
 <pre class="text"><code>df &lt;- data_frame(a = runif(20), b = runif(20), c = runif(20), d = runif(20))
 
 df %&gt;% map_dbl(., function(x) mean(x))</code></pre>
-<script type="application/json" data-opts-chunk="1">{"fig.width":6.5,"fig.height":4,"fig.retina":2,"fig.align":"default","fig.keep":"high","fig.show":"asis","out.width":624,"warning":false,"error":false,"message":false,"exercise.df_print":"paged","exercise.checker":"NULL"}</script>
+<script type="application/json" data-opts-chunk="1">{"fig.width":6.5,"fig.height":4,"fig.retina":2,"fig.align":"default","fig.keep":"high","fig.show":"asis","out.width":624,"warning":true,"error":false,"message":true,"exercise.df_print":"paged","exercise.checker":"NULL"}</script>
 </div>
 <ul>
 <li><code>purrr::map()</code>’s utility becomes more apparent when we consider a fairly common issue in data science: split-apply-combine, or map-reduce</li>
@@ -501,7 +500,7 @@ summary_stats &lt;- function(){
 }
 
 summary_stats(starwars$height)</code></pre>
-<script type="application/json" data-opts-chunk="1">{"fig.width":6.5,"fig.height":4,"fig.retina":2,"fig.align":"default","fig.keep":"high","fig.show":"asis","out.width":624,"warning":false,"error":false,"message":false,"exercise.df_print":"paged","exercise.checker":"NULL"}</script>
+<script type="application/json" data-opts-chunk="1">{"fig.width":6.5,"fig.height":4,"fig.retina":2,"fig.align":"default","fig.keep":"high","fig.show":"asis","out.width":624,"warning":true,"error":false,"message":true,"exercise.df_print":"paged","exercise.checker":"NULL"}</script>
 </div>
 <div class="tutorial-exercise-support" data-label="intermediate-ex-1-solution" data-caption="Code" data-completion="1" data-diagnostics="1" data-startover="1" data-lines="0">
 <pre class="text"><code>data(starwars)
@@ -523,7 +522,7 @@ summary_stats(starwars$height)</code></pre>
 <p><strong>2)</strong> Notice how we had to type the same thing four times to check and load four different packages at the beginning of this tutorial. This violates a fundamental rule of programming (never copy and paste the same thing). Try to check and load each required package using <code>lapply()</code>. Remember, <code>lapply()</code> takes a list as input, and returns a list as output. <em>Hint</em> for <code>lapply()</code> to work in this case, you must also pass the input argument <code>character.only=TRUE</code>.</p>
 <div class="tutorial-exercise" data-label="intermediate-ex-2" data-caption="Code" data-completion="1" data-diagnostics="1" data-startover="1" data-lines="10">
 <pre class="text"><code>paks &lt;- c(&#39;learnr&#39;,&#39;tidyverse&#39;,&#39;purrr&#39;,&#39;here&#39;)</code></pre>
-<script type="application/json" data-opts-chunk="1">{"fig.width":6.5,"fig.height":4,"fig.retina":2,"fig.align":"default","fig.keep":"high","fig.show":"asis","out.width":624,"warning":false,"error":false,"message":false,"exercise.df_print":"paged","exercise.checker":"NULL"}</script>
+<script type="application/json" data-opts-chunk="1">{"fig.width":6.5,"fig.height":4,"fig.retina":2,"fig.align":"default","fig.keep":"high","fig.show":"asis","out.width":624,"warning":true,"error":false,"message":true,"exercise.df_print":"paged","exercise.checker":"NULL"}</script>
 </div>
 <div class="tutorial-exercise-support" data-label="intermediate-ex-2-solution" data-caption="Code" data-completion="1" data-diagnostics="1" data-startover="1" data-lines="0">
 <pre class="text"><code>paks &lt;- c(&#39;learnr&#39;,&#39;tidyverse&#39;,&#39;purrr&#39;,&#39;here&#39;)
@@ -535,7 +534,7 @@ if (any(lapply(paks, require, character.only=TRUE) == FALSE)) {
 <p><strong>3)</strong> Use conditional logic to add a column to the <code>starwars</code> dataset splitting it by median <code>starwars$height</code>.</p>
 <div class="tutorial-exercise" data-label="intermediate-ex-3" data-caption="Code" data-completion="1" data-diagnostics="1" data-startover="1" data-lines="10">
 <pre class="text"><code>data(starwars)</code></pre>
-<script type="application/json" data-opts-chunk="1">{"fig.width":6.5,"fig.height":4,"fig.retina":2,"fig.align":"default","fig.keep":"high","fig.show":"asis","out.width":624,"warning":false,"error":false,"message":false,"exercise.df_print":"paged","exercise.checker":"NULL"}</script>
+<script type="application/json" data-opts-chunk="1">{"fig.width":6.5,"fig.height":4,"fig.retina":2,"fig.align":"default","fig.keep":"high","fig.show":"asis","out.width":624,"warning":true,"error":false,"message":true,"exercise.df_print":"paged","exercise.checker":"NULL"}</script>
 </div>
 <div class="tutorial-exercise-support" data-label="intermediate-ex-3-solution" data-caption="Code" data-completion="1" data-diagnostics="1" data-startover="1" data-lines="0">
 <pre class="text"><code>data(starwars)
@@ -547,7 +546,7 @@ starwars$median_split &lt;- ifelse(starwars$height &gt;= medianHeight, &#39;Abov
 <p><strong>4)</strong> Return to the <code>starwars</code> data set. Use a functional (<code>apply()</code> or <code>purrr::map()</code>) to iterate across every column (not just one) and find out how many <code>NA</code>s there are in each. Then, can you replace each <code>NA</code> value with <code>999</code>? <em>Hint</em> use the base function <code>replace()</code> inside your functional.</p>
 <div class="tutorial-exercise" data-label="intermediate-ex-4" data-caption="Code" data-completion="1" data-diagnostics="1" data-startover="1" data-lines="10">
 <pre class="text"><code>data(starwars)</code></pre>
-<script type="application/json" data-opts-chunk="1">{"fig.width":6.5,"fig.height":4,"fig.retina":2,"fig.align":"default","fig.keep":"high","fig.show":"asis","out.width":624,"warning":false,"error":false,"message":false,"exercise.df_print":"paged","exercise.checker":"NULL"}</script>
+<script type="application/json" data-opts-chunk="1">{"fig.width":6.5,"fig.height":4,"fig.retina":2,"fig.align":"default","fig.keep":"high","fig.show":"asis","out.width":624,"warning":true,"error":false,"message":true,"exercise.df_print":"paged","exercise.checker":"NULL"}</script>
 </div>
 <div class="tutorial-exercise-support" data-label="intermediate-ex-4-solution" data-caption="Code" data-completion="1" data-diagnostics="1" data-startover="1" data-lines="0">
 <pre class="text"><code>data(starwars)
@@ -565,10 +564,10 @@ starwars_NA_replace &lt;- as_tibble(starwars_NA_replace)</code></pre>
 </div>
 
 <script type="application/shiny-prerendered" data-context="server-start">
-knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
 
-if (!require(pacman)) { install.packages("pacman"); library(pacman) }
-p_load(learnr, tidyverse, purrr, here)
+paks <- c('learnr', 'dplyr', 'purrr', 'readr')
+
+lapply(paks, require, character.only=TRUE)
 
 </script>
  
