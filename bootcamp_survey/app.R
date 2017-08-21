@@ -17,10 +17,11 @@ appCSS <-
   ".mandatory_star { color: red; }
   #error { color: red; }"
 
-fieldsAll <- c('title', 'age', 'area', 'days', 'install_rate', 'office_rate', 'day1_rate',
-               'tidy_rate', 'vis_rate', 'func_rate', 'best_rate', 'reproduce_rate',
+fieldsAll <- c('title', 'age', 'area', 'day1_attended', 'day2_attended', 'install_rate', 'office_rate',
+               'day1_rate','tidy_rate', 'vis_rate', 'func_rate', 'best_rate', 'reproduce_rate',
                'dat2_rate', 'other_topics', 'other_feedback', 'class_int')
 responsesDir <- file.path("responses")
+
 epochTime <- function() {
   as.integer(Sys.time())
 }
@@ -35,6 +36,7 @@ shinyApp(
     shinyjs::useShinyjs(),
     shinyjs::inlineCSS(appCSS),
     titlePanel("Follow up Survey for Penn State's R Bootcamp"),
+    h4("Built using R and Shiny!"),
     
     ## The actual questions
     
@@ -45,10 +47,33 @@ shinyApp(
                      value = 0, min = 16, max = 100),
         textInput("area", label = "Program area" , "",
                   placeholder = "e.g., Clinical, Developmental, etc."),
-        checkboxGroupInput("days_attended", "Which days did you attend the workshop?",
-                           c("Day 1 (Wednesday)" = "day1", "Day 2 (Thursday)" = "day2")),
+        checkboxInput("day1_attended", "I attended Day 1 of the bootcamp"),
+        checkboxInput("day2_attended", "I attended Day 2 of the bootcamp"),
+        # Slider ratings for individual sessions
         sliderInput("install_rate", "How would you rate the Introductory session on Day 1?",
-                    min = 1, max = 7, value = 0, ticks = FALSE),
+                    min = 1, max = 7, value = 0, ticks = TRUE),
+        sliderInput("office_rate", "How would you rate the Office Hours on Day 1?",
+                    min = 1, max = 7, value = 0, ticks = TRUE),
+        sliderInput("day1_rate", "Overall, how would you rate Day 1?",
+                    min = 1, max = 7, value = 0, ticks = TRUE),
+        sliderInput("tidy_rate", "How would you rate the Data Wrangling session on Day 2?",
+                    min = 1, max = 7, value = 0, ticks = TRUE),
+        sliderInput("vis_rate", "How would you rate the Data Visualization session on Day 2?",
+                    min = 1, max = 7, value = 0, ticks = TRUE),
+        sliderInput("func_rate", "How would you rate the Functional Programming session on Day 2?",
+                    min = 1, max = 7, value = 0, ticks = TRUE),
+        sliderInput("best_rate", "How would you rate the Best Practices session on Day 2?",
+                    min = 1, max = 7, value = 0, ticks = TRUE),
+        sliderInput("reproduce_rate", "How would you rate the Reproducibility session on Day 2?",
+                    min = 1, max = 7, value = 0, ticks = TRUE),
+        sliderInput("day2_rate", "Overall, how would your rate Day 2?",
+                    min = 1, max = 7, value = 0, ticks = TRUE),
+        textInput("other_topics", "Would you have liked to see any other topics covered?", ""),
+        textInput("other_feedback", "Do you have any other feedback about the Bootcamp?", ""),
+        selectInput('class_int',
+                    "Finally, would you be interested in taking a 'Introduction to R' Graduate Seminar Course?",
+                    choices = c('Yes'='yes','No'='no')),
+        # Submit this and save
         actionButton("submit", "Submit", class = "btn-primary"),
         
         # Submit button and error handling
