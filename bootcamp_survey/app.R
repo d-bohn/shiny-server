@@ -4,7 +4,7 @@
 
 # Define some stuff in the global scope
 
-fieldsMandatory <- c("name", "favourite_pkg")
+fieldsMandatory <- c("title")
 
 labelMandatory <- function(label) {
   tagList(
@@ -41,9 +41,9 @@ shinyApp(
     div(id = "form", # Display the questions
         textInput("title", labelMandatory("What is your title?"), "",
                   placeholder = "e.g., Grad, Faculty, etc."),
-        numericInput("age", labelMandatory("What is your age?"),
+        numericInput("age", label("What is your age?"),
                      value = 0, min = 16, max = 100),
-        textInput("area", labelMandatory("Program area"), "",
+        textInput("area", label("Program area"), "",
                   placeholder = "e.g., Clinical, Developmental, etc."),
         checkboxGroupInput("days_attended", "Which days did you attend the workshop?",
                            c("Day 1 (Wednesday)" = "day1", "Day 2 (Thursday)" = "day2")),
