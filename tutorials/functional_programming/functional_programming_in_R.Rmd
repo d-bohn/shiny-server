@@ -12,9 +12,7 @@ If you cannot get this document to work, you can view it interactively at this
 [link](http://bit.ly/2wTJLuf).
 
 ```{r setup, warning = FALSE, message = FALSE, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
-
-if (!require(pacman)) { install.packages("pacman"); library(pacman) }
+library(pacman)
 p_load(learnr, tidyverse, purrr, here)
 
 ```
