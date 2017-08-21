@@ -12,8 +12,10 @@ If you cannot get this document to work, you can view it interactively at this
 [link](http://bit.ly/2wTJLuf).
 
 ```{r setup, warning = FALSE, message = FALSE, include=FALSE}
-library(pacman)
-p_load(learnr, tidyverse, purrr, here)
+
+paks <- c('learnr', 'dplyr', 'purrr', 'readr')
+
+lapply(paks, require, character.only=TRUE)
 
 ```
 
@@ -26,8 +28,6 @@ if(!require("tidyverse")){install.packages("tidyverse"); library("tidyverse")}
 if(!require("purrr")){install.packages("purrr"); library("purrr")}
 
 if(!require("here")){install.packages("here"); library("here")}
-
-#setwd(here::here('functional_programming'))
 
 ```
 
