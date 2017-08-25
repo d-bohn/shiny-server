@@ -1,0 +1,2 @@
+"title","age","area","day1_attended","day2_attended","install_rate","office_rate","day1_rate","tidy_rate","vis_rate","func_rate","best_rate","reproduce_rate","dat2_rate","other_topics","other_feedback","class_int","timestamp"
+grad student,26,HDFS,TRUE,TRUE,4,1,6,5,4,5,4,4,NULL,,try to be concise and stick to one way of doing things or clearly state that you're demonstrating another method to do the same calculation,yes,1503434124

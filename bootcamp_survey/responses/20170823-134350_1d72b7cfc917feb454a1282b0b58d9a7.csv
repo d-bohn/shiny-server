@@ -1,0 +1,2 @@
+"title","age","area","day1_attended","day2_attended","install_rate","office_rate","day1_rate","tidy_rate","vis_rate","func_rate","best_rate","reproduce_rate","dat2_rate","other_topics","other_feedback","class_int","timestamp"
+grad student,23,cognitive,TRUE,TRUE,3,1,3,6,5,3,3,5,NULL,A bit more about shiny and pandoc and maybe more of the stats packages,The first day was too slow if you knew anything about R, the end of the second day was too fast for even intermediate users. I think breaking up into groups or having smaller workshops would have been better. ,no,1503495830

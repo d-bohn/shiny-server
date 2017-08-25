@@ -1,0 +1,2 @@
+"title","age","area","day1_attended","day2_attended","install_rate","office_rate","day1_rate","tidy_rate","vis_rate","func_rate","best_rate","reproduce_rate","dat2_rate","other_topics","other_feedback","class_int","timestamp"
+Grad,27,Clinical,TRUE,TRUE,7,7,5,7,7,7,7,7,NULL,Basic linear regression,Nil.,yes,1503451135
