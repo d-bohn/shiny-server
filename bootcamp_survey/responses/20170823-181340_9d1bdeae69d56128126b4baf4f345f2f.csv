@@ -1,0 +1,2 @@
+"title","age","area","day1_attended","day2_attended","install_rate","office_rate","day1_rate","tidy_rate","vis_rate","func_rate","best_rate","reproduce_rate","dat2_rate","other_topics","other_feedback","class_int","timestamp"
+Grad,25,Clinical (Child),TRUE,TRUE,6,4,6,5,5,2,5,7,NULL,,It might have been helpful to split the class by "beginners" and "intermediate/advanced" because it was definitely difficult for some of us to keep up if we didn't have R experience. ,yes,1503512020

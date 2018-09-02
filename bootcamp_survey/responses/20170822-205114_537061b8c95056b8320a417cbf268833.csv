@@ -1,0 +1,2 @@
+"title","age","area","day1_attended","day2_attended","install_rate","office_rate","day1_rate","tidy_rate","vis_rate","func_rate","best_rate","reproduce_rate","dat2_rate","other_topics","other_feedback","class_int","timestamp"
+Grad student,22,Developmental,TRUE,FALSE,2,1,2,1,1,1,1,1,NULL,,It would have been helpful to have a slower basic tutorial on R. Additionally, it would have been useful to go through basic functions before doing more complex ones. ,yes,1503435074

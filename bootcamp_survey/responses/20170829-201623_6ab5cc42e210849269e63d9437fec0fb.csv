@@ -1,0 +1,2 @@
+"title","age","area","day1_attended","day2_attended","install_rate","office_rate","day1_rate","tidy_rate","vis_rate","func_rate","best_rate","reproduce_rate","dat2_rate","other_topics","other_feedback","class_int","timestamp"
+Grad student,27,Social,TRUE,TRUE,7,7,7,6,2,7,6,6,NULL,More graphing/plotting data would have been helpful,Thought it was a great experience -- thanks for offering it! One suggestion for future would be to be explicit about which R packages people should have installed to more easily follow along ,no,1504037783
